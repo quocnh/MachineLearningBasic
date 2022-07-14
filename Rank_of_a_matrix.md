@@ -52,3 +52,46 @@ $\mathbf{a_5 = 2a_1 +0a_2 + 0a_3 + 0a_4 + 0a_5}$
 
 
 ## 2. The application of matrix rank in Machine Learning
+
+In Machine Learning, there are many type of data (e.g., text, time-series, audio, images, and video). Data is converted into a matrix. Rank of a matrix is important because it can be used for matrix reduction. Let's decompose matrix A:
+$$A = A' * R$$, where $A'$ is a ingredient matrix determined by rank, and $R$ is recepies which is not important to repsent the original input $A$.
+
+In bigdata,  it is important to reduce the dimension of the input data. If $A'$ can be used to represent the original input A, it would be great. Let's decompose the matrix $A$ in the example above.
+
+$$
+A = A' * R
+$$
+
+$$
+\left(\begin{array}{ccccc}
+1&1&2&4&2\\
+2&1&3&5&4\\
+1&1&2&4&2\\
+0&1&1&3&0
+\end{array}\right) =  
+\left(\begin{array}{cc}
+1&1\\
+2&1\\
+1&1\\
+0&0\\
+\end{array}\right) * 
+\left(\begin{array}{ccccc}
+1&0&1&1&2\\
+0&1&1&3&0\\
+\end{array}\right)
+$$
+
+Now, let's analyze the ratio compression after decomposing input $A$.
+Dimension of $A(4,5), A'(4,2), R(2,5)$ we reduce the total element in input $A$ from $20$ to $(8+10)$, it is that much. However, when generalizing the dimension with bigdata input. We have $A(N,P), A'(N,k), R(k,P)$, where $P$ is the number of features, $k$ is the rank of $A'$.  Then the total element of $A'$ and $R$ is 
+
+$$
+N*k + k*P = k(N+P)
+$$
+
+So the reduction:
+
+$$
+	\frac{k(N+P)}{N{}
+$$
+
+If $N = 10000, P= 10, k =5$, then the compression is nearly 50\%
