@@ -38,7 +38,7 @@ $$
 
 Interpretation:  
 
-In matrix A, vectors $a_1$ & $a_2$ are not a linear combination of other previous vector in the group
+In matrix A, vectors $mathbf{a_1}$ & $\mathbf{a_2}$ are not a linear combination of other previous vector in the group
 
 $\mathbf{a_1 = 1a_1 +0a_2 + 0a_3 + 0a_4 + 0a_5}$
 
