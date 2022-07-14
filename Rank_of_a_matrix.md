@@ -91,7 +91,7 @@ $$
 So the reduction:
 
 $$
-	\frac{k(N+P)}{N{}
+	\frac{k(N+P)}{NP}
 $$
 
-If $N = 10000, P= 10, k =5$, then the compression is nearly 50\%
+If $N = 10000, P= 10, k =5$, then the compression is nearly 50%
